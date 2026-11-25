@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden's Pharmacy - Home</title>
+  <style>
+    :root { --pharmacy-blue: #0284c7; --pharmacy-green: #059669; --dark: #1e293b; --light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+    
+    header { background: var(--pharmacy-blue); color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .logo span { color: #fde047; }
+    
+    nav ul { display: flex; list-style: none; gap: 15px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    nav a:hover, nav a.active { color: #fde047; }
+
+    .hero { background: linear-gradient(rgba(2,132,199,0.85), rgba(5,150,105,0.85)), url('images/pharmacy-interior.jpg') center/cover; color: white; text-align: center; padding: 5rem 1rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 20px; }
+    .btn { background: #fde047; color: #000; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block; }
+
+    .container { max-width: 1200px; margin: 3rem auto; padding: 0 20px; }
+    .dept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .dept-card { background: white; border-top: 4px solid var(--pharmacy-blue); border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .dept-card h3 { color: var(--pharmacy-blue); margin-bottom: 10px; }
+    .dept-card a { display: inline-block; margin-top: 10px; color: var(--pharmacy-green); font-weight: bold; text-decoration: none; }
+
+    footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="pharmacy-index.html" class="logo">💊 GOLDEN'S <span>PHARMACY</span></a>
+    <nav>
+      <ul>
+        <li><a href="pharmacy-index.html" class="active">Home</a></li>
+        <li><a href="medicines.html">Medicines & Indications</a></li>
+        <li><a href="herbs.html">Natural Herbs</a></li>
+        <li><a href="prescription.html">Upload Prescription</a></li>
+        <li><a href="pharmacy-cart.html">🛒 Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Your Health, Our Priority</h1>
+    <p>Professional pharmaceutical care, prescription dispensing, over-the-counter medicines, and natural herbal remedies.</p>
+    <a href="medicines.html" class="btn">Browse Medicine Catalog</a>
+  </section>
+
+  <div class="container">
+    <h2 style="margin-bottom: 20px; color: var(--dark);">Pharmacy Departments</h2>
+    <div class="dept-grid">
+      <div class="dept-card">
+        <h3>Prescription Medications</h3>
+        <p>Expert pharmacist dispensing for chronic and acute prescriptions.</p>
+        <a href="medicines.html">View Catalog &rarr;</a>
+      </div>
+      <div class="dept-card">
+        <h3>Over-The-Counter (OTC)</h3>
+        <p>Pain relief, cold & flu treatments, fever reducers, and first aid.</p>
+        <a href="medicines.html">View Catalog &rarr;</a>
+      </div>
+      <div class="dept-card">
+        <h3>Natural Herbs & Remedies</h3>
+        <p>Traditional herbal extracts, wellness teas, and organic supplements.</p>
+        <a href="herbs.html">Explore Herbs &rarr;</a>
+      </div>
+      <div class="dept-card">
+        <h3>First Aid & Medical Devices</h3>
+        <p>Blood pressure monitors, glucometers, bandages, and antiseptics.</p>
+        <a href="medicines.html">View Catalog &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Golden's Pharmacy. Licensed Healthcare Provider. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Herbs & Remedies - Golden's Pharmacy</title>
+  <style>
+    :root { --pharmacy-blue: #0284c7; --pharmacy-green: #059669; --dark: #1e293b; --light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+    
+    header { background: var(--pharmacy-blue); color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: white; text-decoration: none; }
+    .logo span { color: #fde047; }
+    
+    nav ul { display: flex; list-style: none; gap: 15px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    nav a:hover, nav a.active { color: #fde047; }
+
+    .page-title { background: var(--pharmacy-green); color: white; text-align: center; padding: 2.5rem 1rem; border-top: 3px solid #fde047; }
+    .container { max-width: 1200px; margin: 3rem auto; padding: 0 20px; }
+    
+    .herbs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .herb-card { background: white; border: 1px solid #cbd5e1; border-left: 5px solid var(--pharmacy-green); border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .herb-card h3 { color: var(--pharmacy-green); margin-bottom: 8px; }
+
+    footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="pharmacy-index.html" class="logo">💊 GOLDEN'S <span>PHARMACY</span></a>
+    <nav>
+      <ul>
+        <li><a href="pharmacy-index.html">Home</a></li>
+        <li><a href="medicines.html">Medicines & Indications</a></li>
+        <li><a href="herbs.html" class="active">Natural Herbs</a></li>
+        <li><a href="prescription.html">Upload Prescription</a></li>
+        <li><a href="pharmacy-cart.html">🛒 Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-title">
+    <h1>Natural Herbs & Organic Remedies</h1>
+    <p>Traditional herbal medicines, botanical teas, and natural wellness supplements</p>
+  </div>
+
+  <main class="container">
+    <p style="margin-bottom: 25px; color: #475569;">*(Note: This section is structured for you to easily insert your specific natural herbs, botanical names, and traditional uses below).*</p>
+
+    <div class="herbs-grid">
+
+      <!-- HERB ENTRY 1 (Ready for you to edit) -->
+      <div class="herb-card">
+        <h3>[ Herb Name / Botanical Name ]</h3>
+        <p><strong>Traditional Use / Benefits:</strong> Type your details here about what condition or symptom this herb relieves.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b;"><strong>Preparation:</strong> Tea, powder, tincture, etc.</p>
+      </div>
+
+      <!-- HERB ENTRY 2 (Ready for you to edit) -->
+      <div class="herb-card">
+        <h3>[ Herb Name / Botanical Name ]</h3>
+        <p><strong>Traditional Use / Benefits:</strong> Type your details here about what condition or symptom this herb relieves.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b;"><strong>Preparation:</strong> Tea, powder, tincture, etc.</p>
+      </div>
+
+      <!-- HERB ENTRY 3 (Ready for you to edit) -->
+      <div class="herb-card">
+        <h3>[ Herb Name / Botanical Name ]</h3>
+        <p><strong>Traditional Use / Benefits:</strong> Type your details here about what condition or symptom this herb relieves.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b;"><strong>Preparation:</strong> Tea, powder, tincture, etc.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Golden's Pharmacy. Licensed Healthcare Provider. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

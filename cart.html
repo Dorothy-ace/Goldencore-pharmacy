@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Cart - Golden's Pharmacy</title>
+  <style>
+    :root { --pharmacy-blue: #0284c7; --pharmacy-green: #059669; --dark: #1e293b; --light: #f8fafc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+    
+    header { background: var(--pharmacy-blue); color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: white; text-decoration: none; }
+    .logo span { color: #fde047; }
+    
+    nav ul { display: flex; list-style: none; gap: 15px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    nav a:hover, nav a.active { color: #fde047; }
+
+    .page-title { background: var(--pharmacy-blue); color: white; text-align: center; padding: 2.5rem 1rem; border-top: 3px solid #fde047; }
+    .container { max-width: 900px; margin: 3rem auto; padding: 0 20px; }
+    
+    .cart-box { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    .table th, .table td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; }
+    .table th { background: #f1f5f9; color: var(--pharmacy-blue); }
+
+    .total-section { text-align: right; margin-top: 20px; }
+    .checkout-btn { background: var(--pharmacy-green); color: white; border: none; padding: 12px 24px; font-size: 1rem; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    .checkout-btn:hover { background: #047857; }
+
+    @media print {
+      body * { visibility: hidden; }
+      #printable-receipt, #printable-receipt * { visibility: visible; }
+      #printable-receipt { position: absolute; left: 0; top: 0; width: 100%; padding: 30px; background: white; }
+      .no-print { display: none !important; }
+    }
+
+    footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+
+  <header class="no-print">
+    <a href="pharmacy-index.html" class="logo">💊 GOLDEN'S <span>PHARMACY</span></a>
+    <nav>
+      <ul>
+        <li><a href="pharmacy-index.html">Home</a></li>
+        <li><a href="medicines.html">Medicines & Indications</a></li>
+        <li><a href="herbs.html">Natural Herbs</a></li>
+        <li><a href="prescription.html">Upload Prescription</a></li>
+        <li><a href="pharmacy-cart.html" class="active">🛒 Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-title no-print">
+    <h1>Pharmacy Dispensing Cart</h1>
+    <p>Review your selected medicines and print your official pharmacy receipt</p>
+  </div>
+
+  <main class="container">
+    <div class="cart-box no-print">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Medication Name</th>
+            <th>Indication / Condition</th>
+            <th>Qty</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Paracetamol / Panadol (500mg)</td>
+            <td>Fever & Mild Pain</td>
+            <td>2 packs</td>
+            <td>$1.50</td>
+            <td>$3.00</td>
+          </tr>
+          <tr>
+            <td>Amoxicillin (500mg Capsules)</td>
+            <td>Bacterial Infections</td>
+            <td>1 box</td>
+            <td>$8.00</td>
+            <td>$8.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="total-section">
+        <p><strong>Subtotal:</strong> $11.00</p>
+        <p><strong>Dispensing Fee:</strong> $1.00</p>
+        <h3>Grand Total: $12.00</h3>
+        <br>
+        <button class="checkout-btn" onclick="window.print()">Print Pharmacy Receipt / Invoice</button>
+      </div>
+    </div>
+
+    <!-- Printable Receipt Layout -->
+    <div id="printable-receipt" style="display:none;">
+      <h2>GOLDEN'S PHARMACY</h2>
+      <p>Licensed Retail & Dispensing Pharmacy</p>
+      <p>Tel: +254 700 000 000 | Email: care@goldenspharmacy.com</p>
+      <hr style="margin: 15px 0;">
+      <p><strong>Date:</strong> 10/13/2026 | <strong>Receipt #:</strong> GPR-8842</p>
+      <table class="table" style="margin-top: 20px;">
+        <thead>
+          <tr>
+            <th>Medication Name</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Paracetamol / Panadol (500mg)</td><td>2 packs</td><td>$1.50</td><td>$3.00</td></tr>
+          <tr><td>Amoxicillin (500mg Capsules)</td><td>1 box</td><td>$8.00</td><td>$8.00</td></tr>
+        </tbody>
+      </table>
+      <div style="text-align: right; margin-top: 20px;">
+        <p>Subtotal: $11.00</p>
+        <p>Dispensing Fee: $1.00</p>
+        <h3>Total: $12.00</h3>
+      </div>
+      <p style="margin-top: 40px; text-align: center; font-size: 0.85rem;">Thank you for trusting Golden's Pharmacy with your health. Get well soon!</p>
+    </div>
+  </main>
+
+  <footer class="no-print">
+    <p>&copy; 2026 Golden's Pharmacy. Licensed Healthcare Provider. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+
